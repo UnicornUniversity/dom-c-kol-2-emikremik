@@ -48,16 +48,13 @@ export function main(inputNumber, inputNumberSystem, outputNumberSystem) {
 	return result;
 }
   //let dtoOut = exMain(inputNumber, inputNumberSystem, outputNumberSystem);
-  return dtoOut;
-}
-
 /**
  * TODO - Change this to contain all input number systems that your application can convert from.
  * Function which returns which number systems are permitted on input.
  * @returns {Array} array of numbers refering to permitted input systems
  */
 export function permittedInputSystems() {
-	return [10, 2];
+	return [10];
 }
 
 /**
@@ -66,5 +63,5 @@ export function permittedInputSystems() {
  * @returns {Array} array of numbers refering to permitted output systems
  */
 export function permittedOutputSystems() {
-	return [10, 2];
+	return [1];
 }
