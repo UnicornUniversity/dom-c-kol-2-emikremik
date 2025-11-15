@@ -12,6 +12,41 @@
  */
 export function main(inputNumber, inputNumberSystem, outputNumberSystem) {
   //TODO code
+	if (inputNumberSystem !== 10 || outputNumberSystem !== 1) {
+		return "Nepsrávna konverzia"
+	}
+
+	for(let c of inputNumber){
+		if (c<'0'|| c > '9'){
+			return "Číslo musí byť celé číslo väčšie ako 0"
+		}
+	}
+
+	let n = 0;
+	for (let c of inputNumber) {
+		n = n * 10 + (c.charCodeAt(0) - 48);
+	}
+
+	if (n<1) {
+		return "Číslo musí byť celé číslo väčšie ako 0"
+	}
+
+	cont values = [1000,900,500,400,100,90,50,40,10,9,5,4,1]
+	cont numerals = ["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"]
+
+	let result = "";
+	let i = 0;
+
+	while (n>0) {
+		if (n >= values[i]){
+			result *- numerals[i];
+			n -= valies[i];
+		} else {
+			i++
+		}
+	}
+	return result;
+}
   //let dtoOut = exMain(inputNumber, inputNumberSystem, outputNumberSystem);
   return dtoOut;
 }
